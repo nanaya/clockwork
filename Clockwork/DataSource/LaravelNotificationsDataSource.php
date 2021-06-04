@@ -191,7 +191,7 @@ class LaravelNotificationsDataSource extends DataSource
 		return [
 			'subject' => get_class($event->notification),
 			'from'    => $message->username,
-			'to'      => $message->channel,
+			'to'      => [$message->channel],
 			'content' => $message->content
 		];
 	}
